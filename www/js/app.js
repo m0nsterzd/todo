@@ -15,7 +15,7 @@ angular.module('todo', ['ionic'])
     $scope.toggleOnline = function() {
       $scope.online = !$scope.online;
       if ($scope.online) {  // Read http://pouchdb.com/api.html#sync
-        $scope.sync = todoDb.sync('http://192.168.100.220:5984/todos', {live: true})
+        $scope.sync = todoDb.sync('http://clubit.graymata.com:5984/todos', {live: true})
           .on('error', function (err) {
             console.log("Syncing stopped");
             console.log(err);
